@@ -1,0 +1,16 @@
+#coding=utf-8
+
+"""
+@author:htt
+@file:test.py
+@time:2016/7/17 12:36
+"""
+import requests
+from bs4 import BeautifulSoup
+
+url = 'http://www.wdzj.com/wdzj/images/example/2016/06/06/20160606161123s_.png?version=2016-06-06%2016:30:17'
+resp = requests.get(url)
+#print(resp.content)
+
+with open('pic.png','wb') as png:
+	png.write(resp.content)
